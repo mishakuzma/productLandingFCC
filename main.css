@@ -15,6 +15,21 @@ body {
     flex-direction: column;
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
 .nav-link {
-    /* TODO: Complete nav-link class */
+    color: aquamarine;
+}
+
+.nav-link:hover {
+    /* color: red; */
+    filter: brightness(0.95);
 }
