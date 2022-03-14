@@ -27,10 +27,10 @@ nav {
 nav ul {
     display: flex;
     flex-direction: var(--navbar-orientation, row);
+    list-style-type: none;
 }
 
 .nav-link {
-    list-style-type: none;
     padding: 1em;
     color: var(--general-color);
     filter: hue-rotate(10deg) brightness(60%);
