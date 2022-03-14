@@ -1,5 +1,18 @@
+:root {
+    --desktop-min-size: 500px;
+    --small-element-orientation: column;
+}
+
+@media only screen and (min-width: var(--desktop-min-size)) {
+    :root {
+        --small-element-orientation: row;
+    }
+}
+
 body {
-    
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-link {
