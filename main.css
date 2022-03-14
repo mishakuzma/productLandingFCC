@@ -1,6 +1,9 @@
 :root {
     --desktop-min-size: 500px;
     --small-element-orientation: column;
+    --navbar-orientation: row;
+    --general-color: rgba(236, 156, 52, 1);
+    --general-texture: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
 }
 
 @media only screen and (min-width: var(--desktop-min-size)) {
@@ -13,23 +16,32 @@ body {
     /* background-color: blue; */
     display: flex;
     flex-direction: column;
+    background-color: var(--general-color);
 }
 
 nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: var(--navbar-orientation, row);
 }
 
 nav ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: var(--navbar-orientation, row);
 }
 
 .nav-link {
-    color: aquamarine;
+    list-style-type: none;
+    padding: 1em;
+    color: var(--general-color);
+    filter: hue-rotate(10deg) brightness(60%);
+}
+
+.nav-link a, .nav-link a:visited {
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav-link:hover {
     /* color: red; */
-    filter: brightness(0.95);
+    filter: brightness(30%);
 }
