@@ -2,7 +2,9 @@
     --desktop-min-size: 500px;
     --small-element-orientation: column;
     --navbar-orientation: row;
-    --general-color: rgba(236, 156, 52, 1);
+    /* --general-color: rgba(236, 156, 52, 1); */
+    /* We want to store our general colour as a comma list, so that we can use RGBA */
+    --general-color: 236, 156, 52;
     --general-texture: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
 }
 
@@ -16,12 +18,22 @@ body {
     /* background-color: blue; */
     display: flex;
     flex-direction: column;
-    background-color: var(--general-color);
+    align-items: center;
+    background-color: rgba(var(--general-color), 0.7);
+    margin: 0;
+}
+
+header {
+    align-self: flex-start;
 }
 
 nav {
     display: flex;
     flex-direction: var(--navbar-orientation, row);
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(var(--general-color), 1);
 }
 
 nav ul {
@@ -32,7 +44,7 @@ nav ul {
 
 .nav-link {
     padding: 1em;
-    color: var(--general-color);
+    color: rgba(var(--general-color), 1);
     filter: hue-rotate(10deg) brightness(60%);
 }
 
@@ -44,4 +56,8 @@ nav ul {
 .nav-link:hover {
     /* color: red; */
     filter: brightness(30%);
+}
+
+#about {
+    padding: 3em 0 0 0;
 }
