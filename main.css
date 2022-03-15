@@ -6,6 +6,7 @@
     /* We want to store our general colour as a comma list, so that we can use RGBA */
     --general-color: 236, 156, 52;
     --general-texture: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+    --content-margin: 10em 10em 10em 10em;
 }
 
 @media only screen and (min-width: var(--desktop-min-size)) {
