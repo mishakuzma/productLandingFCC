@@ -116,7 +116,8 @@ form input[type="email"] {
 }
 
 form input[type="submit"] {
-
+    align-self: center;
+    width: 50%;
 }
 
 h1 {
