@@ -7,6 +7,8 @@
     --general-color: 236, 156, 52;
     --general-texture: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
     --content-margin: 10em 10em 10em 10em;
+    --gen-gradient: linear-gradient(0deg, red, yellow, orange);
+    --shadow-color: red;
 }
 
 @media only screen and (min-width: var(--desktop-min-size)) {
@@ -16,16 +18,37 @@
 }
 
 body {
-    /* background-color: blue; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(var(--general-color), 0.7);
+    /* background-color: rgba(var(--general-color), 0.7); */
+    background: var(--gen-gradient); 
     margin: 0;
 }
 
+#body-wrapper::after {
+    /* TODO: figure out how to make background less opaque */
+    content: "";
+    background: var(--general-texture);
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+}
+/* #body-wrapper {
+    
+} */
+
 header {
     align-self: flex-start;
+}
+
+p {
+    font-family: Hubballi, Arial, Helvetica, sans-serif;
+    font-size: 3em;
 }
 
 nav {
@@ -69,9 +92,46 @@ section {
 
 #about {
     padding: 3em 0 0 0;
+    align-content: center;
 }
+
+#about p {
+    text-align: center;
+    margin: 1em 2em;
+}
+
+form {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(241, 218, 86);
+    border-radius: 2%; 
+    align-content: stretch;
+    width: 70%;
+}
+
+form input[type="email"] {
+    text-align: center;
+}
+
+form input[type="submit"] {
+
+}
+
+h1 {
+    font-family: Hubballi, cursive;
+    font-size: 100px;
+    font-style: italic;
+}
+
 
 #video {
     width: 500px;
     height: 350px;
+}
+
+.price-card {
+    padding: 2em;
+    box-shadow: 1em 1em 2em var(--shadow-color);
 }
