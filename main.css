@@ -9,6 +9,7 @@
     --content-margin: 10em 10em 10em 10em;
     --gen-gradient: linear-gradient(0deg, red, yellow, orange);
     --shadow-color: red;
+    --price-card-width: 30vw;
 }
 
 @media only screen and (min-width: var(--desktop-min-size)) {
@@ -132,7 +133,19 @@ h1 {
     height: 350px;
 }
 
+#pricing {
+    flex-direction: var(--small-element-orientation);
+}
+
 .price-card {
-    padding: 2em;
+    text-align: center;
+    padding: 4em;
+    margin: 3em;
     box-shadow: 1em 1em 2em var(--shadow-color);
+    width: var(--price-card-width);
+    background-color: cornsilk;
+}
+
+.price-card ul {
+    text-align:start;
 }
