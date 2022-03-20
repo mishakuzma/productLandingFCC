@@ -72,7 +72,7 @@ nav a {
     align-self: center;
 }
 nav img {
-    width: 5max;
+    width: 5vmax;
     height: 5vmax;
 }
 
@@ -140,7 +140,7 @@ form input[type="email"] {
 
 form input[type="submit"] {
     align-self: center;
-    width: 50%;
+    width: 30%;
     flex-grow: 1;
     flex-shrink:3;
 }
@@ -183,7 +183,7 @@ h3 {
 
 #video {
     width: 60vw;
-    height: 350px;
+    height: 60vh;
 }
 
 #cards-wrapper  {
