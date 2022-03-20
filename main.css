@@ -58,7 +58,6 @@ nav {
     flex-direction: var(--navbar-orientation, row);
     justify-content: space-evenly;
     position: fixed;
-    width: 100%;
     background-color: rgba(var(--general-color), 1);
     padding: 0.3em;
 }
