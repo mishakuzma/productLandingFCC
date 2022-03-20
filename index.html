@@ -16,12 +16,12 @@
   <div id="body-wrapper">
     <header id="header">
       <nav id="nav-bar">
-        <img
-          id="header-img"
-          src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Mars_-_Marsic.png"
-          width="50em"
-          height="50em"
-        />
+        <a href="#about">
+          <img
+            id="header-img"
+            src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Mars_-_Marsic.png"
+          />
+        </a>
         <ul>
           <li><a class="nav-link" href="#about">About Us</a></li>
           <li><a class="nav-link" href="#features">Features</a></li>
@@ -49,15 +49,15 @@
     <section id="features">
       <h2>Features</h2>
       <ul>
-        <li>
+        <li id="feature1">
           Consistent cartographic representation and symbology. No Martian
           topology will ever get in the way of your data's integrity!
         </li>
-        <li>
+        <li id="feature2">
           Persistent time-logging on all incoming data and changes. Don't let
           relativity get in the way of your decision making!
         </li>
-        <li>
+        <li id="feature3">
           Areoanalytical tools and algorithms independent from
           Terrestrially-trained processes. Let your Martian settlement be a
           first for humanity!
@@ -71,41 +71,47 @@
     </section>
     <section id="pricing">
       <h2>Pricing</h2>
-      <div class="price-card">
-        <h3>Rover</h3>
-        <ul>
-          <li>Connect our software to your rover and knit images together.</li>
-          <li>Images are automatically areoreferenced.</li>
-          <li>Time stamps keep your images as valid data.</li>
-        </ul>
-      </div>
-      <div class="price-card">
-        <h3>Explorer</h3>
-        <ul>
-          <li>Develop coordinate systems for your Martian imagery</li>
-          <li>
-            Get data layers delivered to your Terrestrial computers. Learn about
-            Martian dust in real time!
-          </li>
-          <li>
-            Map the surface of your quadrant before a human even sets foot on
-            the Red Planet.
-          </li>
-        </ul>
-      </div>
-      <div class="price-card">
-        <h3>Settler</h3>
-        <ul>
-          <li>Find optimal locations for habitat building.</li>
-          <li>
-            Map space routes and orbital patterns to touch down your space
-            shuttle.
-          </li>
-          <li>
-            Connect to orbital satellites to monitor for dust storms and protect
-            your personnel.
-          </li>
-        </ul>
+      <p>Help our Kickstarter! <br>We offer three packages of support.</p>
+      <div id="cards-wrapper">
+        <div class="price-card">
+          <h3>Rover</h3>
+          <p>$50</p>
+          <ul>
+            <li>Connect our software to your rover and knit images together.</li>
+            <li>Images are automatically areoreferenced.</li>
+            <li>Time stamps keep your images as valid data.</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Explorer</h3>
+          <p>$100</p>
+          <ul>
+            <li>Develop coordinate systems for your Martian imagery</li>
+            <li>
+              Get data layers delivered to your Terrestrial computers. Learn about
+              Martian dust in real time!
+            </li>
+            <li>
+              Map the surface of your quadrant before a human even sets foot on
+              the Red Planet.
+            </li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Settler</h3>
+          <p>$250</p>
+          <ul>
+            <li>Find optimal locations for habitat building.</li>
+            <li>
+              Map space routes and orbital patterns to touch down your space
+              shuttle.
+            </li>
+            <li>
+              Connect to orbital satellites to monitor for dust storms and protect
+              your personnel.
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <footer>

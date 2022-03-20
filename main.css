@@ -1,5 +1,5 @@
 :root {
-    --desktop-min-size: 500px;
+    --desktop-min-size: 300px;
     --small-element-orientation: column;
     --navbar-orientation: row;
     /* --general-color: rgba(236, 156, 52, 1); */
@@ -10,12 +10,23 @@
     --gen-gradient: linear-gradient(0deg, red, yellow, orange);
     --shadow-color: red;
     --price-card-width: 30vw;
+    --price-card-height: auto;
 }
 
-@media only screen and (min-width: var(--desktop-min-size)) {
+@media (min-width: 100px) {
     :root {
         --small-element-orientation: row;
-    }
+        --navbar-orientation: row;
+        /* --general-color: rgba(236, 156, 52, 1); */
+        /* We want to store our general colour as a comma list, so that we can use RGBA */
+        --general-color: 236, 156, 52;
+        --general-texture: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+        --content-margin: 10em 10em 10em 10em;
+        --gen-gradient: linear-gradient(0deg, red, yellow, orange);
+        --shadow-color: red;
+        --price-card-width: 30vw;
+        --price-card-height: auto;
+    };
 }
 
 body {
@@ -52,7 +63,13 @@ p {
     font-size: 3em;
 }
 
+li {
+    font-family: 'Hubballi', cursive;
+    font-size: 2em;
+    padding: 1em;
+}
 nav {
+    width: 100%;
     display: flex;
     flex-direction: var(--navbar-orientation, row);
     justify-content: space-evenly;
@@ -62,6 +79,14 @@ nav {
     padding: 0.3em;
 }
 
+nav a {
+    align-self: center;
+}
+nav img {
+    width: 5em;
+    height: 5em;
+}
+
 nav ul {
     display: flex;
     flex-direction: var(--navbar-orientation, row);
@@ -69,9 +94,10 @@ nav ul {
 }
 
 .nav-link {
-    padding: 1em;
+    padding: 0em;
     color: rgba(var(--general-color), 1);
     filter: hue-rotate(10deg) brightness(60%);
+    text-decoration: none;
 }
 
 .nav-link a, .nav-link a:visited {
@@ -105,7 +131,7 @@ section {
 form {
     padding: 1em;
     display: flex;
-    flex-direction: column;
+    flex-direction: var(--small-element-orientation);
     justify-content: center;
     background-color: rgb(241, 218, 86);
     border-radius: 2%; 
@@ -128,6 +154,30 @@ h1 {
     font-style: italic;
 }
 
+h2 {
+    font-size: 3em;
+    font-family: 'Hubballi', cursive;
+}
+
+h3 {
+    font-size: 2em;
+    font-family: 'Hubballi', cursive;
+}
+
+#features ul {
+    list-style-type: none;
+}
+#feature1::before {
+    content: "🗺️";
+}
+
+#feature2::before {
+    content: "🕐";
+}
+
+#feature3::before {
+    content: "🛰️";
+}
 
 #video {
     width: 500px;
@@ -135,6 +185,10 @@ h1 {
 }
 
 #pricing {
+    flex-direction: column;
+}
+
+#cards-wrapper  {
     flex-direction: var(--small-element-orientation);
 }
 
@@ -144,13 +198,23 @@ h1 {
     margin: 3em;
     box-shadow: 1em 1em 2em var(--shadow-color);
     width: var(--price-card-width);
+    height: var(--price-card-height);
     background-color: cornsilk;
+    border-style: dotted;
+    border-radius: 25%;
+    border-color: rgb(218, 179, 90);
 }
 
 .price-card ul {
     text-align:start;
+    font-family: 'Hubbali', cursive;
+    /* NOTE: Using filters makes this element bleed into navbar. */
+    /* filter: opacity(70%); */
 }
 
 footer {
-    
+    padding: 2vh;
+    background-color: brown;
+    filter: brightness(70%);
+    text-align: center;
 }
