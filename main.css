@@ -22,8 +22,7 @@ body {
     margin: 0;
 }
 
-#body-wrapper::after {
-    /* TODO: figure out how to make background less opaque */
+/* #body-wrapper::after {
     content: "";
     background: var(--general-texture);
     opacity: 0.8;
@@ -33,9 +32,6 @@ body {
     right: 0;
     z-index: -1;
 
-}
-/* #body-wrapper {
-    
 } */
 
 header {
@@ -50,10 +46,15 @@ p {
 li {
     font-family: 'Hubballi', cursive;
     font-size: 2em;
-    padding: 1em;
 }
+
+header {
+    width: 100%;
+}
+
 nav {
     width: 100%;
+    height: 5vh;
     display: flex;
     flex-direction: var(--navbar-orientation, row);
     justify-content: space-evenly;
@@ -66,18 +67,21 @@ nav a {
     align-self: center;
 }
 nav img {
-    width: 5em;
-    height: 5em;
+    width: 5max;
+    height: 5vmax;
 }
 
 nav ul {
     display: flex;
     flex-direction: var(--navbar-orientation, row);
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-link {
-    padding: 0em;
+    padding: 0 2vw;
+    font-size: 3vw;
     color: rgba(var(--general-color), 1);
     filter: hue-rotate(10deg) brightness(60%);
     text-decoration: none;
@@ -154,6 +158,11 @@ h3 {
 #features ul {
     list-style-type: none;
 }
+
+#features ul li {
+    padding: 1em;
+}
+
 #feature1::before {
     content: "🗺️";
 }
